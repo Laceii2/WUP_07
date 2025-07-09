@@ -47,7 +47,7 @@ basicCC <- ggplot(kr3,aes(x=result,y=prcnt*100,fill=sex))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
- When you look at the chart percentage wise males are dying more. About 65% of dead collums is made of males.  
+ When you look at the chart percentage wise males are dying more. About 65% of dead columns is made of males.  
 
 
 
@@ -56,6 +56,13 @@ basicCC + geom_bar(stat="identity", position = "dodge")
   
 ## Numerical results
 
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+When looking at the numbers 64 out of 100 males died and 36 out of 100 females are dead. There is more males dead than females.
 
 ## Inferential results 
 
